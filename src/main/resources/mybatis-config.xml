@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- typeAliases别名 不写明alias=""就是批量命名别名※注意：批量命名别名时，默认命名为的别名为类名（不区别大小写）。-->
+<typeAliases>
+    <package name="com.xzh.pojo"/>
+</typeAliases>
+    <mappers>
+        <mapper class="com.xzh.dao.BookMapper"/>
+    </mappers>
+
+</configuration>
