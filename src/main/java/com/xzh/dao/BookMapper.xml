@@ -7,13 +7,13 @@
     INSERT INTO ssmbuild.books(bookname, bookcounts, detail)
     VALUES (#{bookname},#{bookcounts},#{detail});
 </insert>
-    <delete id="deleteBookById" parameterType="int">
+    <delete id="deleteBookById" parameterType="int"> /*parameterType看你填什么  增删改 默认返回int型 int deleteBookById(int id) 参数int*/
         DELETE  FROM ssmbuild.books WHERE bookID=#{bookId};
     </delete>
-    <update id="updateBook" parameterType="Books">
+    <update id="updateBook" parameterType="Books">/*int updateBook(Books books)返回int型 参数books*/
         UPDATE  ssmbuild.books set bookname=#{bookname},bookcounts=#{bookcounts},detail=#{detail} WHERE bookID=#{bookID};
     </update>
-    <select id="queryBookById"  resultType="Books">
+    <select id="queryBookById"  resultType="Books">/*返回Books型*/
         SELECT * FROM ssmbuild.books WHERE bookID=#{bookId};
     </select>
     <select id="queryAllBook"  resultType="Books">
